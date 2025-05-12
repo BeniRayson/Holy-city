@@ -457,11 +457,14 @@ header h1 {
     }
   
     header h1 {
-      font-size: 2rem;
+      font-size: 3.8rem;
+      margin-left: 0;
+      margin-top: 80px;
+    
     }
   
     header p {
-      font-size: 1rem;
+      font-size: 2rem;
     }
   
     .introduction h2 {
@@ -498,6 +501,7 @@ header h1 {
   
     .footer-social {
       margin-top: -80px;
+      
         
     }
   
