@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>holy city </title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ 
+
+
+</head>
+<style>
+    :root {
+    --primary: #2C3E50;
+    --secondary: #18BC9C;
+    --hover: #1ABC9C;
+    --background: #F5F5F5;
+    --light: #eaeaea;
+    --text: #fff;
+    --black: #000;
+    --white: #fff;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --nav-background: transparent; 
+    --hero-background: url('./public/loc.jpg') no-repeat center center/cover;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--white);
+    color: var(--text);
+    line-height: 1.6;
+    border-radius: none;
+
+  }
+  
+  nav {
+    background: var(--primary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+  }
+  
+  .nav-logo img {
+    height: 140px;
+    width: 200px;
+    display: block;
+    margin-left: 60px;
+  }
+  
+  .nav-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: var(--hover);
+  }
+
+  
+  header {
+    background: var(--hero-background);
+    color: var(--white);
+    padding: 180px 20px 100px;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 80vh;
+    position: relative;
+    z-index: 1;
+}
+
+header::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: -1; 
+}
+body {
+      font-family: 'Roboto', sans-serif;
+      background-color:var(--white);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1, h2 {
+      color: #1a1a2e;
+    }
+
+    .section {
+      margin-bottom: 40px;
+      background: var(--white);
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .section h2 {
+      margin-top: 0;
+      border-bottom: 2px solid #1a1a2e;
+      padding-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    .social-links a {
+      display: block;
+      color: #1a1a2e;
+      text-decoration: none;
+      margin-bottom: 6px;
+    }
+
+
+    @media (max-width: 768px) {
+    nav {
+      height: 50px;
+      padding: 0 15px;
+    }
+    .nav-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 28px;
+    }
+
+    nav ul li {
+      padding: 10px;
+    }
+
+    header {
+      padding: 100px 20px;
+      height: 50vh;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .section {
+      padding: 15px;
+    }
+
+    .footer-info, .footer-bottom {
+      font-size: 12px;
+    }
+
+    .language-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+  }
+
+</style>
+<body>
+  
+  <nav>
+    <div class="nav-logo">
+      <img src="./public/logo30.png" alt="le logo">
+    </div>
+    
+    <div class="nav-container">
+      <ul>
+        <li><a href="hotel.html">Hotel</a></li>
+        <li><a href="espace de sport.html">Espace de Sport </a></li>
+        <li><a href="restaurant.html">Restaurant</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+
+      </ul>
+    </div>
+  </nav>
+  <header>
+    <div class="hero"></div>
+  </header>
+
+  <div class="container">
+    <h1>Entrer en contact avec l’hôtel</h1>
+
+    <div class="section">
+      <h2>Téléphones</h2>
+      <ul>
+        <li><strong>Mobile :</strong> +257 72 483 21</li>
+        <li><strong>Fax :</strong> +257 222 220 46</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Email</h2>
+      <ul>
+        <li><strong>Informations générales & Réservations chambres :</strong> info@hotelholycity.com</li>
+        <li><strong>Évènements :</strong> marketing@holycity.com</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Réseaux Sociaux</h2>
+      <div class="social-links">
+        <a href="#">facebook.com/hotelholycity</a>
+        <a href="#">youtube.com/hotelholycity</a>
+        <a href="#">twitter.com/hotelholycity</a>
+        <a href="#">instagram.com/hotelholycity</a>
+      </div>
+    </div>
+
+    
+    <div class="section">
+      <h2>Autres Liens</h2>
+      <ul>
+        <li>The Key Event </li>
+        <li>Umuco Africa Studio </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Contacts</h2>
+      <p><strong>Adresse :</strong> Chaussée D'Uvira, Bujumbura, BP 6573 (BU)</p>
+      <ul>
+        <li><strong>Téléphones :</strong> +257 222253 20/15/33</li>
+        <li><strong>Mobile :</strong> +257 72483021</li>
+        <li><strong>Fax :</strong> +257 2224536</li>
+        <li><strong>Email :</strong> info@hotelholycity.com</li>
+        <li><strong>Site web :</strong> www.hotelholycity.com</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    
+    <div class="footer-sitemap">
+      <h4>Plan du site</h4>
+      <ul>
+        <li><a href="hotel.html">Hotel</a></li>
+        <li><a href="espace de sport.html">Espace de sport </a></li>
+        <li><a href="restaurant.html">Restaurant</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Suivez-nous sur :</h4>
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+
+  <div class="language-switcher">
+    <h4>Langues</h4>
+    <a href="#" title="Français"><img src="./public/france.png" alt="Français"></a>
+    <a href="#" title="Anglais"><img src="./public/kigdoom.png" alt="English"></a>
+    <a href="#" title="Kirundi"><img src="./public/burundiflag.png" alt="Kirundi"></a>
+  </div>
+  
+    
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>Phone</h3>
+        <p>📞 +257 67 39 10 31 &nbsp;&nbsp; | &nbsp;&nbsp; +257 72 48 30 21</p>
+        <p>📞 +257 67 39 10 31 &nbsp;&nbsp; | &nbsp;&nbsp; +257 72 48 30 21</p>
+        <p>📍  Bujumbura / Burundi</p>
+      </div>
+  
+  
+     
+  
+    <div class="footer-bottom">
+      <p>&copy; Holy City. Tous droits réservés.</p>
+    </div>
+  </footer>
+</body>
+</html>

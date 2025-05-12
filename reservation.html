@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Réservation Hôtel & Restaurant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #2C3E50;
+      --secondary: #18BC9C;
+      --hover: #1ABC9C;
+      --white: #ffffff;
+      --dark-overlay: rgba(0, 0, 0, 0.15);
+      --light-bg: rgba(255, 255, 255, 0.95);
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      color: var(--white);
+      background: url('./public/face1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background: rgba(0, 0, 0, 0.15);
+      z-index: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 30px;
+      font-size: 1.6em;
+      font-weight: bold;
+      z-index: 1;
+      position: relative;
+      color: var(--white);
+    }
+    
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+      z-index: 1;
+      position: relative;
+    }
+
+    .form-section,
+    .calendar-section {
+      flex: 1 1 400px;
+      background: none;
+      border-radius: 12px;
+      padding: 30px;
+      color: #333;
+      min-height: 700px;
+    }
+
+    .form-section h2,
+    .calendar-section h2 {
+      color: var(--white);
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: var(--white);
+      padding: 5px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--white);
+      border-radius: 8px;
+      font-size: 1em;
+      background-color: var(--white);
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--primary);
+      outline: none;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background-color: var(--primary);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: var(--secondary);
+    }
+
+    .info-box {
+      background: var(--white);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .info-box h3 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+
+    .info-box ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .info-box li {
+      margin-bottom: 5px;
+    }
+
+    iframe {
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      height: 400px;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Réservation - Hôtel & Restaurant & Salle de conference
+  </header>
+
+  <div class="container">
+    <div class="calendar-section">
+      <h2>Calendrier</h2>
+      <iframe src="https://calendar.google.com/calendar/embed?src=en.bi%23holiday%40group.v.calendar.google.com&ctz=Africa%2FMaputo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+      <div class="info-box">
+        <h3>Heures d'ouverture</h3>
+        <ul>
+          <li><strong>Lundi - Vendredi :</strong> 08h - 22h</li>
+          <li><strong>Samedi :</strong> 09h - 00h</li>
+          <li><strong>Dimanche :</strong> Fermé</li>
+        </ul>
+        <p>📍 Avenue du Large, Bujumbura<br><br>📞 22 22 48 30 21 & 72 48 30 21 </p>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h2>Réserver maintenant</h2>
+      <form>
+        <div class="form-group">
+          <label for="nom">Nom complet</label>
+          <input type="text" id="nom" name="nom" placeholder="Béni Rayson" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Adresse e-mail</label>
+          <input type="email" id="email" name="email" placeholder="umihirwa@gmail.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="type">Type de réservation</label>
+          <select id="type" name="type">
+            <option value="hotel">Hôtel</option>
+            <option value="restaurant">Restaurant</option>
+            <option value="salle conference">Salle - conférence</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date" id="date" name="date" required />
+        </div>
+
+        <div class="form-group">
+          <label for="heure">Heure (si Hôtel - Restaurant - Conférence)</label>
+          <input type="time" id="heure" name="heure" />
+        </div>
+
+        <div class="form-group">
+          <label for="details">Détails supplémentaires</label>
+          <textarea id="details" name="details" placeholder="Demande spéciale, nombre de personnes..."></textarea>
+        </div>
+
+        <button type="submit">Envoyer la réservation</button>
+      </form>
+    </div>
+  </div>
+
+
+  <script>
+    document.querySelector("form").addEventListener("submit", async function (e) {
+      e.preventDefault(); 
+  
+      
+      const nom = document.getElementById("nom").value;
+      const email = document.getElementById("email").value;
+      const type = document.getElementById("type").value;
+      const date = document.getElementById("date").value;
+      const heure = document.getElementById("heure").value;
+      const details = document.getElementById("details").value;
+  
+  
+      try {
+        const response = await fetch("http://localhost:3000/api/reservations", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            nom,
+            email,
+            type,
+            date,
+            heure,
+            details,
+          }),
+        });
+  
+        const result = await response.json();
+  
+        if (response.ok) {
+          alert("Réservation envoyée avec succès !");
+          document.querySelector("form").reset();
+        } else {
+          alert("Erreur : " + result.message || "Une erreur est survenue.");
+        }
+      } catch (error) {
+        alert("Erreur réseau : " + error.message);
+      }
+    });
+  </script>
+  
+
+
+</body>
+</html>
